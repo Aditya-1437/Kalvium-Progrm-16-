@@ -34,32 +34,42 @@ function addFruit() {
 //Uses the pop() method to remove the last fruit from the list.
 //Calls displayFruits() to show the updated list.
 function removeFruit() {
-   
+   fruits.pop();
+   displayFruits();
 }
 //Slice Fruits (Show the First 3 Fruits):
 //Implement a function sliceFruits() that:
 //Uses the slice() method to display only the first 3 fruits from the fruits array.
 //Call displayFruits() to show the sliced list.
 function sliceFruits() {
-  
+  let sliced = fruits.slice(0,3)
+  displayFruits(sliced);
 }
 // Complete the function spliceFruits() that:
 //Uses the splice() method to remove the second fruit (at index 1) from the fruits array.(donot modify in the original array)
 //Call displayFruits() to update the list.
 function spliceFruits() {
-  
+    let frt = ["Apple", "Banana", "Mango", "Pineapple", "Orange"]
+    let spliced = frt.splice(1,1);
+    displayFruits(frt);
 }
 // Complete the function mapFruits() that:
 //Uses the map() method to convert all fruit names to uppercase.
 // Call displayFruits() to display the uppercase version of the list.
 function mapFruits() {
-   
+   let list = fruits.map((fruit)=>{
+    return fruit.toUpperCase()
+   })
+   displayFruits(list)
 }
 
 // Implement a function filterFruits() that:
 //Uses the filter() method to display fruits whose names are longer than 5 characters.
 //Call displayFruits() to show the filtered list.
 function filterFruits() {
-    
+    let filtered = fruits.filter((fruit)=>{
+        return fruit.length>5
+    })
+    displayFruits(filtered)
 }
 
